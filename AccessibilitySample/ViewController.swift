@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "section:\(indexPath.section), row:\(indexPath.row)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell else { return UITableViewCell() }
+        cell.titleLabel.text = "section:\(indexPath.section), row:\(indexPath.row)"
         return cell
     }
 
