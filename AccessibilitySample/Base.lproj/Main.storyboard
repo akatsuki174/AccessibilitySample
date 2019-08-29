@@ -36,24 +36,35 @@
                                                         <constraint firstAttribute="height" constant="36" id="rUU-xd-NjO"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-d5-04G">
-                                                    <rect key="frame" x="52" y="37" width="69.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-d5-04G">
+                                                    <rect key="frame" x="52" y="37" width="56" height="21"/>
+                                                    <color key="backgroundColor" red="0.93097246319223093" green="0.9853253960609436" blue="0.91074482108674826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="row" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-Br-qiz">
+                                                    <rect key="frame" x="116" y="37" width="28" height="21"/>
+                                                    <color key="backgroundColor" red="0.9853253960609436" green="0.92502816756054829" blue="0.97768635531749082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="g4g-Br-qiz" firstAttribute="centerY" secondItem="192-cI-o7j" secondAttribute="centerY" id="09f-k7-5KN"/>
                                                 <constraint firstItem="Ejg-d5-04G" firstAttribute="leading" secondItem="G9q-is-emY" secondAttribute="trailing" constant="8" id="7pr-Hc-ojL"/>
                                                 <constraint firstItem="Ejg-d5-04G" firstAttribute="centerY" secondItem="192-cI-o7j" secondAttribute="centerY" id="8W4-Vc-y54"/>
                                                 <constraint firstItem="G9q-is-emY" firstAttribute="leading" secondItem="192-cI-o7j" secondAttribute="leading" constant="8" id="C74-UF-B5F"/>
                                                 <constraint firstItem="G9q-is-emY" firstAttribute="centerY" secondItem="192-cI-o7j" secondAttribute="centerY" id="JKf-ay-IQc"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ejg-d5-04G" secondAttribute="trailing" constant="20" symbolic="YES" id="rz3-OO-47y"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g4g-Br-qiz" secondAttribute="trailing" constant="8" id="SX2-LF-jBi"/>
+                                                <constraint firstItem="g4g-Br-qiz" firstAttribute="leading" secondItem="Ejg-d5-04G" secondAttribute="trailing" constant="8" id="rz3-OO-47y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mainImageView" destination="G9q-is-emY" id="p7v-hK-BO7"/>
-                                            <outlet property="titleLabel" destination="Ejg-d5-04G" id="zOc-rn-h7k"/>
+                                            <outlet property="rowLabel" destination="g4g-Br-qiz" id="8ic-7r-UQv"/>
+                                            <outlet property="sectionLabel" destination="Ejg-d5-04G" id="zOc-rn-h7k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -6,14 +6,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        // セルを一つの単位として読み上げるようにする
+        tableView.isAccessibilityElement = false
+        tableView.shouldGroupAccessibilityChildren = true
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell else { return UITableViewCell() }
-        cell.titleLabel.text = "section:\(indexPath.section), row:\(indexPath.row)"
+        cell.mainImageView.accessibilityLabel = "icon"
+        cell.sectionLabel.text = "section:\(indexPath.section)"
+        cell.rowLabel.text = "row:\(indexPath.row)"
         return cell
     }
 
